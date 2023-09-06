@@ -1,0 +1,255 @@
+/*se eliminan el margin,
+paddin del navegador*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*display flex para el body
+ de nuestra pagina 
+ su altura es de 100vh, 
+ es decir la pantalla completa de cada pantalla
+*/
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+ 
+}
+/*icono svg para desplazarse
+ al inicio*/
+#top{
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    width: 2em;
+    height: 2em;
+}
+/*fuentes y tamaño los elementos de texto*/
+h2{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(255, 249, 249);
+    line-height: 4px;
+    font-size: 14px;
+}
+h3,p{
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+b{
+    font-size:14px;
+    line-height: 4px;
+}
+span{
+    color: rgb(47, 82, 255);
+}
+/*encabezado
+de la pagina*/
+.encabezado{
+    height: 4rem;
+    background-color: #0E9AE4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#home{
+    height: 3rem;
+    width: 3rem;
+}
+#home:hover{
+    background-color: white;
+    border-radius: 50%;
+}
+/*main principal, contenedor de
+ toda la informacion*/
+.mainPrincipal{
+    height: calc(100vh - 4rem - 2rem);
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+/*seccion1 ubicada dentro del main
+contiene articulos los cuales contienen informacion
+de cada etiqueta*/
+.section1{
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+article{
+    height: calc(100vh - 3rem - 2rem);
+    padding: 1rem;
+    margin: .5em;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+/*contenedor de articles para 
+la etiqueta article*/
+#contarticle{
+    background-color: lightgray;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 12rem;
+    max-width: 40rem;
+    margin-top: 2rem;
+}
+/*articulos dentro
+ del contenedor articles*/
+.articulos{
+    background-color: lightblue;
+    width: 8rem;
+    height: 8rem;
+}
+/*imagenes dentro 
+de cada article se aplica tamaño
+y demas propiedades*/
+article img{
+    height: 12rem;
+    max-width: 600px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*elemento canvas con el cual
+se demostrara la funcion de la 
+etiqueta canvas*/
+#main-canvas{
+    height: 150px;
+    width: 200px;
+    border: 1px solid #000;
+}
+/*se deja tamaño fijo para la imagen 
+de la etiqueta area para asi poder explicarla
+el tema de coorders */
+#imgArea{
+    height: 243px;
+    width: 377px;
+}
+/*stilos a la etiqueta button*/
+button{
+    width: 4rem;
+    height: 3rem;
+    transition: .4s;
+    background-color: rgb(139, 216, 233);
+    margin: 1em;
+}
+button:hover{
+    background-color: rgb(13, 108, 251);
+    color: #fff;
+}
+/*boton troll*/
+.buttontroll:hover{
+    background-color: rgb(13, 108, 251);
+    color: #fff;
+    transition: 2s;
+    transform: translateX(100px);    
+}
+/*
+seccíon2 es la barra lateral 
+en la parte izquierda 
+contenedor del menu
+*/
+.section2{
+    width: 25rem;
+    overflow: auto;
+}
+.menu{
+height: 3rem;
+background-color: rgb(9, 91, 116);
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/*propiedades para la 
+barra scroll del menu y todo el menu*/
+.section2::-webkit-scrollbar-thumb {
+    background-color: rgb(12, 175, 225);
+    border: 1px solid #fff;
+  }
+.section2::-webkit-scrollbar {
+    width: 10px;              
+  }
+  /*input*/
+  input{
+    width: 30%;
+  }
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+li{
+    margin-left: 1rem;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+a:hover{
+    color: blue;
+}
+a:hover>span{
+    color: rgb(255, 0, 119);
+}
+/*stilos para el 
+footer de la pagina*/
+.footerPagina{
+    height: 2rem;
+    background-color: rgb(45, 164, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*se aplica @media para que sea responsive
+ en dispositivos inferiores a 600px */
+
+ @media only screen and (max-width: 700px){
+    article img{
+        width: 100%;
+    }
+    /*se cambia la direccion del flex a columnas*/
+    .mainPrincipal{
+        flex-direction: column;
+    }
+    .section2{
+     flex: 1;   
+     width: 100%;
+    }
+    .section1{
+        flex: 3;
+    }
+    /*articulos se cambia tamaños*/
+    .articulos{
+        background-color: lightblue;
+        width: 3rem;
+        height: 2rem;
+    }
+    article{
+        height: calc(100vh - 4rem - 2rem);
+    }
+    .section2{
+        border-bottom: 2px #0E9AE4 solid;
+        background-color: rgb(255, 255, 255);
+    }
+
+} 

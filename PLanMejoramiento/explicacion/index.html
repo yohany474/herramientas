@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejemplo</title>
+</head>
+<body>
+    <!--etiqueta de mayor que >  =&gt;  -->
+    <!--etiqueta de menor que <  =&lt; -->
+    <div>
+        <h3>Explicacion etiquetas:  </h3>
+        <h2>&lt;dd &gt;  &lt;dt &gt;  &lt;dl &gt;</h2>
+        <!--ejemploo de la etiqueta dd -->
+        <h1>Glosario de computadoras e Internet</h1>
+            <dl>
+                <dt>Punto de acceso inalámbrico</dt>
+                <dd>Un dispositivo que permite a los dispositivos inalámbricos conectarse a una red cableada mediante Wi-Fi, o estándares relacionados. El PA usualmente se conecta a un router (mediante una red cableada) como un dispositivo independiente, pero también puede ser un componente integrado al mismo router.</dd>
+                <dt>Ancho de banda</dt>
+                <dd>Una medida de transferencia de la disponibilidad o consumo de recursos de comunicación expresada en bits por segundo o sus múltiplos (bit/s, kbit/s, Mbit/s, Gbit/s, etc.).</dd>
+                <dt>Cortafuegos</dt>
+                <dd>Un sistema de seguridad basado en software o hardware que controla el tráfico entrante o saliente de la red basado en un conjunto de reglas. Un cortafuegos establece una barrera entre una red interna segura y confiable y otra red (por ejemplo, Internet) que se asume no es segura y confiable.</dd>
+            </dl>
+            <button type="button" onclick="alert('Dentro de esta etiqueta, se incluye la descripcion de un elemento <dt>  Ejemplo: un glosario')">&lt;dd &gt;</button>
+            <button type="button" onclick="alert('Dentro de esta etiqueta, se incluye el titulo para la descripcion de la etiqueta <dl>')">&lt;dt &gt;</button>    
+            <button type="button" onclick="alert('Dentro de esta etiqueta, se incluye las etiquetas <dt> <dd>')">&lt;dl &gt;</button>
+        <br>
+        <h2>&lt;datalist&gt;</h2>
+        <h1>Etiqueta &lt;datalist&gt;</h1>
+        <br>
+        <p>El elemento HTML&lt;datalist &gt;contiene un conjunto de elementos &lt;option &gt; que representan los valores disponibles para otros controles</p>
+        <label >selecciona un navegador de la siguiente lista</label>
+        <br>
+        <!--ejemplo de lista de navegadores-->
+        <input list="navegadores">
+            <datalist id="navegadores">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Microsoft Edge">
+            </datalist>
+        <br>
+        <button type="button" onclick="alert('En el ejemplo de sintaxis vemos como primero declaramos un input con el nombre de la lista en el atributo list. Después ponemos la nueva etiqueta datalist con los diferentes valores de la lista y la relacionamos con el input mediante id navegadores')">&lt;datalist&gt;</button>
+
+        <h2>&lt;colgroup&gt; </h2>
+        <h1>etiqueta &lt;/colgroup&gt;</h1>
+        <p>
+            colgroup de column group = Grupo de columnas. Permite crear grupos de columnas. 
+            Sus etiquetas son: &lt;colgroup&gt; y &lt;/colgroup&gt; (la de cierre es opcional).
+            Crea una caja: No.
+            Está definido como: Elemento para tablas.
+            Puede contener: Cero o más elementos col.
+        </p>
+        <b>Contiene una etiqueta denominada &lt;col&gt; va dentro de la etiqueta &lt;colgroup&gt;</b>
+        <table>
+            <thead>titulo1 de la table</thead>
+            <colgroup>
+                <col style="background-color: yellow;">
+                <col style="background-color: blue;">
+                <col style="background-color: red;">
+                <col style="background-color: rgb(71, 255, 224);">
+            </colgroup>
+        <tr><!--crea una fila de la tabla-->
+            <th>celda1</th>     <!--crea una celda de la tabla-->
+            <th>celda2</th>     <!--crea una celda de la tabla-->
+            <th>celda3</th>     <!--crea una celda de la tabla-->
+            <th>celda3</th>     <!--crea una celda de la tabla-->
+        </tr>
+        <tr><!--crea una fila de la tabla-->
+            <td>celda4</td>     <!--crea una celda de la tabla-->
+            <td>celda5</td>     <!--crea una celda de la tabla-->
+            <td>celda6</td>     <!--crea una celda de la tabla-->
+            <td>celda3</td>     <!--crea una celda de la tabla-->
+        </tr>
+        
+        <tr><!--crea una fila de la tabla-->
+            <td>celda7</td>     <!--crea una celda de la tabla-->
+            <td>celda8</td>     <!--crea una celda de la tabla-->
+            <td>celda9</td>     <!--crea una celda de la tabla-->
+            <td>celda3</td>     <!--crea una celda de la tabla-->
+        </tr>
+        </table>
+
+        <button type="button" onclick="alert('Cada etiqueta <col> puede definir un estilo diferente para cada columna dependiendo los col que pongamos en ese orden va aplicarse a la tabla')">&lt;colgroup &gt;</button>
+    </div>    
+
+     &lt;
+     colgroup
+     &gt;
+     &copy;
+</body>
+</html>
